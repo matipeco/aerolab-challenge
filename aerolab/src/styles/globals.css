@@ -42,6 +42,9 @@
   --body-s: 1.4rem;
   --body-xs: 1.2rem;
 }
+html {
+  font-size: 10px;
+}
 body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
@@ -54,4 +57,10 @@ h5,
 h6 {
   text-transform: uppercase;
   font-weight: 900;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
 }
