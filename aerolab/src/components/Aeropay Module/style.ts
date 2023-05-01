@@ -12,6 +12,7 @@ export const StyledAeropay = styled.div`
   border: 1px solid var(--neutral-300);
   font-size: 1.8rem;
   width: 31.2rem;
+
   .module {
     &__title {
       color: var(--neutral-900);
@@ -21,10 +22,13 @@ export const StyledAeropay = styled.div`
       padding: 0 var(--padding-x) 1.5rem;
       border-bottom: 1px solid var(--neutral-300);
     }
+    &__button {
+      margin-top: 2.4rem;
+      width: 100%;
+    }
     &__points {
       white-space: nowrap;
       display: flex;
-
       label {
         text-align: center;
         flex: 1;
