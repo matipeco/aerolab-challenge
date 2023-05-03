@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente Button se renderiza correctamente 1`] = `
+<div>
+  <button
+    class="sc-9ab37ee8-0 hDUWMd clase  "
+  >
+    soy el boton
+  </button>
+</div>
+`;
