@@ -8,6 +8,7 @@ import type {
 type Props = PropsWithChildren<
   {
     isPending?: boolean;
+    className: string;
   } & ButtonHTMLAttributes<HTMLButtonElement>
 >;
 
