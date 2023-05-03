@@ -1,11 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Componente Button se renderiza correctamente 1`] = `
+exports[`Componente Button Agrega la clase disabled 1`] = `
+<div>
+  <button
+    class="sc-9ab37ee8-0 hDUWMd classname  disabled"
+    disabled=""
+  >
+    boton
+  </button>
+</div>
+`;
+
+exports[`Componente Button Agrega la clase pending 1`] = `
+<div>
+  <button
+    class="sc-9ab37ee8-0 hDUWMd classname pending "
+  >
+    boton
+  </button>
+</div>
+`;
+
+exports[`Componente Button Se renderiza correctamente 1`] = `
 <div>
   <button
     class="sc-9ab37ee8-0 hDUWMd clase  "
   >
-    soy el boton
+    boton
   </button>
 </div>
 `;
