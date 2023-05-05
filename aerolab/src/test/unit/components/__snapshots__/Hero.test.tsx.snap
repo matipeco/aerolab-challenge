@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente Hero Se renderiza correctamente 1`] = `
+<div>
+  <section
+    class="sc-d097a297-0 dVVtZf"
+  >
+    <div
+      class="sc-7fb36d29-0 cfGUwX"
+    >
+      <div>
+        <h1
+          class="hero__title"
+        >
+          <span
+            class="title__overline"
+          >
+            explore the 
+          </span>
+          <span
+            class="title__tech"
+          >
+            tech
+          </span>
+          zone
+        </h1>
+        <p
+          class="hero__description"
+        >
+          Here you’ll be able to exchange all of your hard-earned Aeropoints and exchange them for cool tech.
+        </p>
+        <a
+          class="hero__link"
+          href="#"
+        >
+          View all products
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="32"
+            loading="lazy"
+            src="./assets/icons/arrow.svg"
+            style="color: transparent;"
+            width="32"
+          />
+        </a>
+      </div>
+      <div>
+        <div
+          class="hero__image-container"
+        >
+          <img
+            alt="persona haciendo malabares"
+            data-nimg="1"
+            decoding="async"
+            height="795"
+            loading="lazy"
+            src="/_next/image?url=%2Fassets%2Fillustrations%2Fhero-desktop.png&w=1920&q=75"
+            srcset="/_next/image?url=%2Fassets%2Fillustrations%2Fhero-desktop.png&w=1080&q=75 1x, /_next/image?url=%2Fassets%2Fillustrations%2Fhero-desktop.png&w=1920&q=75 2x"
+            style="color: transparent;"
+            width="897"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
