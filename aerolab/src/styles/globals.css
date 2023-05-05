@@ -26,8 +26,8 @@
   --gradient-ilustration: linear-gradient(90deg, #7296eb, #eac0e9, #eac0e9);
   --gradient-section: linear-gradient(
     102.47deg,
-    rgba(23, 111, 235, 0.5) -5.34%,
-    rgba(255, 128, 255, 0.5) 106.58%
+    #176feb80 -5.34%,
+    #ff80ff80 106.58%
   );
   --gradient-aerolab: linear-gradient(180deg, #ff8800 0%, #ff6600 100%);
 

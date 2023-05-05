@@ -12,6 +12,7 @@ export const StyledAeropay = styled.div`
   border: 1px solid var(--neutral-300);
   font-size: 1.8rem;
   width: 31.2rem;
+  z-index: 2;
 
   .module {
     &__title {
@@ -41,6 +42,7 @@ export const StyledAeropay = styled.div`
         span {
           background-image: var(--brand-gradient);
           background-clip: text;
+          -webkit-background-clip: text;
         }
       }
       label:not(:last-child) {

@@ -21,6 +21,7 @@ export const StyledDropdown = styled.button`
       font-weight: 600;
       background-image: var(--brand-gradient);
       background-clip: text;
+      -webkit-background-clip: text;
       color: transparent;
     }
     &__chevron {
