@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente Walkthrough Se renderiza correctamente 1`] = `
+<div>
+  <section
+    class="sc-51fa7f76-0 ivHqsm"
+  >
+    <div
+      class="sc-7fb36d29-0 cfGUwX"
+    >
+      <article
+        class="sc-5d3fbbe4-0 dtykUg"
+      >
+        <img
+          alt=""
+          class="card__img"
+          data-nimg="1"
+          decoding="async"
+          height="498"
+          loading="lazy"
+          src="/_next/image?url=%2Fassets%2Fillustrations%2Fwalkthroug-1-desktop.png&w=1080&q=75"
+          srcset="/_next/image?url=%2Fassets%2Fillustrations%2Fwalkthroug-1-desktop.png&w=640&q=75 1x, /_next/image?url=%2Fassets%2Fillustrations%2Fwalkthroug-1-desktop.png&w=1080&q=75 2x"
+          style="color: transparent;"
+          width="508"
+        />
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__title"
+          >
+            <span>
+              <img
+                alt=""
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/assets/icons/walkthrough-1.svg"
+                style="color: transparent;"
+                width="40"
+              />
+            </span>
+            1—browse
+          </p>
+          <p
+            class="card__description"
+          >
+            Browse our tech catalog with more than 20 top tech products
+          </p>
+        </div>
+      </article>
+      <article
+        class="sc-5d3fbbe4-0 dtykUg"
+      >
+        <img
+          alt=""
+          class="card__img"
+          data-nimg="1"
+          decoding="async"
+          height="498"
+          loading="lazy"
+          src="/_next/image?url=%2Fassets%2Fillustrations%2Fwalkthroug-2-desktop.png&w=1080&q=75"
+          srcset="/_next/image?url=%2Fassets%2Fillustrations%2Fwalkthroug-2-desktop.png&w=640&q=75 1x, /_next/image?url=%2Fassets%2Fillustrations%2Fwalkthroug-2-desktop.png&w=1080&q=75 2x"
+          style="color: transparent;"
+          width="508"
+        />
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__title"
+          >
+            <span>
+              <img
+                alt=""
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/assets/icons/walkthrough-2.svg"
+                style="color: transparent;"
+                width="40"
+              />
+            </span>
+            2—choose
+          </p>
+          <p
+            class="card__description"
+          >
+            Exchange your hard earned AeroPoints for the item you want
+          </p>
+        </div>
+      </article>
+      <article
+        class="sc-5d3fbbe4-0 dtykUg"
+      >
+        <img
+          alt=""
+          class="card__img"
+          data-nimg="1"
+          decoding="async"
+          height="498"
+          loading="lazy"
+          src="/_next/image?url=%2Fassets%2Fillustrations%2Fwalkthroug-3-desktop.png&w=1080&q=75"
+          srcset="/_next/image?url=%2Fassets%2Fillustrations%2Fwalkthroug-3-desktop.png&w=640&q=75 1x, /_next/image?url=%2Fassets%2Fillustrations%2Fwalkthroug-3-desktop.png&w=1080&q=75 2x"
+          style="color: transparent;"
+          width="508"
+        />
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__title"
+          >
+            <span>
+              <img
+                alt=""
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/assets/icons/walkthrough-3.svg"
+                style="color: transparent;"
+                width="40"
+              />
+            </span>
+            3—enjoy!
+          </p>
+          <p
+            class="card__description"
+          >
+            All done, you can relax! We’ll take care of delivery of your tech item!
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+`;

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente WalkthroughCard Se renderiza correctamente 1`] = `
+<div>
+  <article
+    class="sc-5d3fbbe4-0 dtykUg"
+  >
+    <img
+      alt=""
+      class="card__img"
+      data-nimg="1"
+      decoding="async"
+      height="498"
+      loading="lazy"
+      src="/_next/image?url=%2Fimagen.png&w=1080&q=75"
+      srcset="/_next/image?url=%2Fimagen.png&w=640&q=75 1x, /_next/image?url=%2Fimagen.png&w=1080&q=75 2x"
+      style="color: transparent;"
+      width="508"
+    />
+    <div
+      class="card__text"
+    >
+      <p
+        class="card__title"
+      >
+        <span>
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Ficon.png&w=96&q=75"
+            srcset="/_next/image?url=%2Ficon.png&w=48&q=75 1x, /_next/image?url=%2Ficon.png&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </span>
+        titulo
+      </p>
+      <p
+        class="card__description"
+      >
+        saraasa description
+      </p>
+    </div>
+  </article>
+</div>
+`;
