@@ -46,6 +46,7 @@ html {
   font-size: 10px;
 }
 body {
+  background-color: var(--neutral-0);
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
