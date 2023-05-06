@@ -2,8 +2,18 @@
 const nextConfig = {
   reactStrictMode: true,
   compiler: {
-    styledComponents: true
-  }
-}
+    styledComponents: true,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "coding-challenge-api.aerolab.co",
+        port: "",
+        pathname: "/images/**",
+      },
+    ],
+  },
+};
 
 module.exports = nextConfig;
