@@ -50,6 +50,7 @@ export const StyledWalkthroughCard = styled.article`
       }
     }
     &__description {
+      max-width: 30ch;
       font-size: var(--body-l);
       font-weight: 600;
       line-height: 1.5;
