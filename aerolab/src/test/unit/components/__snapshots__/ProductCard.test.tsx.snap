@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente ProductCard Se renderiza correctamente 1`] = `
+<div>
+  <article
+    class="sc-f637aa53-0 dxiibP"
+  >
+    <div
+      class="card__container"
+    >
+      <div
+        class="card__img-container"
+      >
+        <img
+          alt="iphone7"
+          data-nimg="1"
+          decoding="async"
+          height="204"
+          loading="lazy"
+          src="/_next/image?url=%2Fimagen.png&w=640&q=75"
+          srcset="/_next/image?url=%2Fimagen.png&w=384&q=75 1x, /_next/image?url=%2Fimagen.png&w=640&q=75 2x"
+          style="color: transparent;"
+          width="280"
+        />
+      </div>
+      <div
+        class="card__info"
+      >
+        <h3
+          class="card__title"
+        >
+          iphone7
+        </h3>
+        <p
+          class="card__category"
+        >
+          phone
+        </p>
+      </div>
+    </div>
+    <button
+      class="sc-9ab37ee8-0 hDUWMd card__button  "
+    >
+      Redeem for
+       
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="24"
+        loading="lazy"
+        src="/assets/icons/aeropay-3.svg"
+        style="color: transparent;"
+        width="24"
+      />
+      2300
+    </button>
+  </article>
+</div>
+`;
