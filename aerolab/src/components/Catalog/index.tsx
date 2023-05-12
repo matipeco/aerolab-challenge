@@ -4,6 +4,7 @@ import type { Product } from "@/pages";
 import { FunctionComponent } from "react";
 import { ProductCard } from "../ProductCard";
 import Image from "next/image";
+import { RadioButton } from "../RadioButton";
 
 type Props = {
   products: Product[];
@@ -14,28 +15,28 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
     return prod.category;
   });
   const setCategories = Array.from(new Set(categories));
-  console.log(setCategories);
   return (
     <StyledCatalog>
       <Container>
         <h2 className="catalog__title">
           <span>tech</span> products
         </h2>
-        <div>
-          <label htmlFor="filter">Filter by:</label>
-          <select name="" id="filter">
-            <option value="">All Products</option>
-            {setCategories.map((cat) => {
-              return <option key={cat}>{cat}</option>;
-            })}
-          </select>
-          <p>Sorted by:</p>
-          <label htmlFor="radio-1">Most recent</label>
-          <input type="radio" id="radio-1" name="sort" />
-          <label htmlFor="radio-2">Lowest Price</label>
-          <input type="radio" id="radio-2" name="sort" />
-          <label htmlFor="radio-3">Highest Price</label>
-          <input type="radio" id="radio-3" name="sort" />
+        <div className="filters__container">
+          <div className="select__container">
+            <label htmlFor="filter">Filter by:</label>
+            <select name="" id="filter" className="filters__select">
+              <option value="">All Products</option>
+              {setCategories.map((cat) => {
+                return <option key={cat}>{cat}</option>;
+              })}
+            </select>
+          </div>
+          <div className="radio__container">
+            <p>Sorted by:</p>
+            <RadioButton id="radio-1" name="sort" label="Most recent" />
+            <RadioButton id="radio-2" name="sort" label="Lowest Price" />
+            <RadioButton id="radio-3" name="sort" label="Highest Price" />
+          </div>
 
           <div>
             <button>
