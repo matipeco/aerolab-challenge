@@ -5,4 +5,6 @@ export const StyledNavbar = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 4rem 0;
+  z-index: 1;
+  position: relative;
 `;
