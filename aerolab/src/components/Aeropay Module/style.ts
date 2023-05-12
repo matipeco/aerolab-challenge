@@ -30,31 +30,11 @@ export const StyledAeropay = styled.div`
     &__points {
       white-space: nowrap;
       display: flex;
-      label {
-        text-align: center;
-        flex: 1;
-        background-color: var(--brand-light-100);
-        padding: 0.8rem 0;
-        border-radius: 1.2rem;
-        color: transparent;
-        font-weight: 600;
-        cursor: pointer;
-        span {
-          background-image: var(--brand-gradient);
-          background-clip: text;
-          -webkit-background-clip: text;
-        }
-      }
-      label:not(:last-child) {
+      & > span:not(:last-child) {
         margin-right: 0.4rem;
       }
-
-      input:checked + label {
-        color: var(--neutral-100);
-        background-image: var(--brand-gradient);
-      }
-      input {
-        appearance: none;
+      & > span {
+        flex: 1;
       }
     }
   }

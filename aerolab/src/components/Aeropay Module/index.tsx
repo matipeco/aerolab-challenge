@@ -2,6 +2,7 @@ import { Aerocard } from "../Aerocard";
 import { Button } from "../Button";
 import { StyledAeropay } from "./style";
 import Image from "next/image";
+import { RadioButton } from "../RadioButton";
 
 export const AeropayModule = () => {
   return (
@@ -9,18 +10,9 @@ export const AeropayModule = () => {
       <p className="module__title">Add Balance</p>
       <Aerocard />
       <div className="module__points">
-        <input type="radio" id="point-1000" name="points" />
-        <label htmlFor="point-1000">
-          <span>1000</span>
-        </label>
-        <input type="radio" id="point-5000" name="points" />
-        <label htmlFor="point-5000">
-          <span>5000</span>
-        </label>
-        <input type="radio" id="point-7500" name="points" />
-        <label htmlFor="point-7500">
-          <span>7500</span>
-        </label>
+        <RadioButton id="point-1000" label="1000" name="points" />
+        <RadioButton id="point-5000" label="5000" name="points" />
+        <RadioButton id="point-7500" label="7500" name="points" />
       </div>
 
       <Button className="module__button">
