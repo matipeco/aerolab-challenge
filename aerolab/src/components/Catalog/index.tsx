@@ -38,24 +38,27 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
             <RadioButton id="radio-3" name="sort" label="Highest Price" />
           </div>
 
-          <div>
+          <div className="pagination__container">
             <button>
               <Image
                 src="/assets/icons/chevron-default.svg"
                 alt=""
-                width="40"
-                height="40"
+                width="24"
+                height="24"
                 className="chevron-left"
               />
             </button>
-            <p>{`Page 1 of 2`}</p>
+
+            <p>
+              Page <span>1 of 2</span>
+            </p>
             <button>
               <Image
                 className="chevron-right"
                 src="/assets/icons/chevron-default.svg"
                 alt=""
-                width="40"
-                height="40"
+                width="24"
+                height="24"
               />
             </button>
           </div>
@@ -72,7 +75,33 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
             />
           ))}
         </div>
-        <div>cant products + pagination</div>
+        <div className="catalog__footer">
+          <p>x of 32 products</p>
+          <div className="pagination__container">
+            <button>
+              <Image
+                src="/assets/icons/chevron-default.svg"
+                alt=""
+                width="24"
+                height="24"
+                className="chevron-left"
+              />
+            </button>
+
+            <p>
+              Page <span>1 of 2</span>
+            </p>
+            <button>
+              <Image
+                className="chevron-right"
+                src="/assets/icons/chevron-default.svg"
+                alt=""
+                width="24"
+                height="24"
+              />
+            </button>
+          </div>
+        </div>
       </Container>
     </StyledCatalog>
   );
