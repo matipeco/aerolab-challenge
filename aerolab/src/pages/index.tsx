@@ -1,4 +1,5 @@
 import { Catalog } from "@/components/Catalog";
+import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { Walkthrough } from "@/components/Walkthrough";
@@ -27,6 +28,7 @@ const Home: FunctionComponent<Props> = ({ products }) => {
       <Hero />
       <Walkthrough />
       <Catalog products={products} />
+      <Footer />
     </>
   );
 };
