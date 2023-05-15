@@ -8,8 +8,8 @@ export const Footer = () => {
       <Container>
         <Image
           src="./assets/icons/github-default.svg"
-          width="40"
-          height="40"
+          width="28"
+          height="28"
           alt=""
         />
         <a href="https://github.com/matipeco/aerolab-challenge">
