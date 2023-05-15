@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente Footer Se renderiza correctamente 1`] = `
+<div>
+  <footer
+    class="sc-1a54be11-0 eCRAyy"
+  >
+    <div
+      class="sc-50f7ce2-0 ipptrS"
+    >
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="28"
+        loading="lazy"
+        src="./assets/icons/github-default.svg"
+        style="color: transparent;"
+        width="28"
+      />
+      <a
+        href="https://github.com/matipeco/aerolab-challenge"
+      >
+        View this repository
+      </a>
+    </div>
+  </footer>
+</div>
+`;
