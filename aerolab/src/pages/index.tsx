@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Walkthrough } from "@/components/Walkthrough";
 import axios from "axios";
 import { FunctionComponent } from "react";
+import { Provider } from "@/context";
 
 export type Product = {
   img: {
@@ -23,13 +24,13 @@ type Props = {
 
 const Home: FunctionComponent<Props> = ({ products }) => {
   return (
-    <>
+    <Provider>
       <Navbar />
       <Hero />
       <Walkthrough />
       <Catalog products={products} />
       <Footer />
-    </>
+    </Provider>
   );
 };
 
