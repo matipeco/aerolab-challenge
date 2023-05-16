@@ -1,10 +1,13 @@
 import { StyledDropdown, StyledContainer } from "./style";
 import Image from "next/image";
-import { useState } from "react";
-import { AeropayModule } from "../Aeropay Module";
+import { useState, useContext } from "react";
+import { AeropayModule } from "../AeropayModule";
+import { Context } from "@/context";
 
 export const Dropdown = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  const { points } = useContext(Context)!;
 
   return (
     <StyledContainer>
@@ -15,7 +18,7 @@ export const Dropdown = () => {
           width="32"
           height="32"
         />
-        <span className="button__points">1456</span>
+        <span className="button__points">{points}</span>
         <Image
           src="./assets/icons/chevron-default.svg"
           alt=""
