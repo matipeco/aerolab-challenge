@@ -5,9 +5,11 @@ import type {
   ButtonHTMLAttributes,
 } from "react";
 
+export type ButtonStatus = "disabled" | "pending" | "default";
+
 type Props = PropsWithChildren<
   {
-    isPending?: boolean;
+    status?: ButtonStatus;
     className: string;
   } & ButtonHTMLAttributes<HTMLButtonElement>
 >;
@@ -15,16 +17,13 @@ type Props = PropsWithChildren<
 export const Button: FunctionComponent<Props> = ({
   children,
   className,
-  isPending,
-  disabled,
+  status = "default",
   ...rest
 }) => {
   return (
     <StyledButton
-      className={`${className} ${isPending ? "pending" : ""} ${
-        disabled ? "disabled" : ""
-      }`}
-      disabled={disabled ? true : undefined}
+      className={`${className} ${status}`}
+      disabled={status === "disabled"}
       {...rest}
     >
       {children}

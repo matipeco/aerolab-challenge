@@ -1,7 +1,8 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useContext, useState } from "react";
 import { StyledProductCard } from "./style";
 import Image from "next/image";
-import { Button } from "../Button";
+import { Button, ButtonStatus } from "../Button";
+import { Context } from "@/context";
 
 type Props = {
   image: string;
@@ -11,6 +12,46 @@ type Props = {
   category: string;
 };
 
+type ButtonContent = {
+  text: string;
+  image: string | null;
+  aeropoints: number | null;
+  status: ButtonStatus;
+};
+
+const getButtonContent = (
+  cost: number,
+  points: number,
+  isPending: boolean
+): ButtonContent => {
+  const canBuy = cost <= points;
+
+  if (!canBuy) {
+    return {
+      text: "You need ",
+      image: "/assets/icons/aeropay-4.svg",
+      aeropoints: cost - points,
+      status: "disabled",
+    };
+  }
+
+  if (isPending) {
+    return {
+      text: "Processing...",
+      image: null,
+      aeropoints: null,
+      status: "pending",
+    };
+  }
+
+  return {
+    text: "Redeem for ",
+    image: "/assets/icons/aeropay-3.svg",
+    aeropoints: cost,
+    status: "default",
+  };
+};
+
 export const ProductCard: FunctionComponent<Props> = ({
   image,
   id,
@@ -18,6 +59,26 @@ export const ProductCard: FunctionComponent<Props> = ({
   cost,
   category,
 }) => {
+  const [isPending, setIsPending] = useState(false);
+
+  const { points, setPoints } = useContext(Context)!;
+
+  const {
+    text,
+    image: img,
+    aeropoints,
+    status,
+  } = getButtonContent(cost, points, isPending);
+
+  const handleClick = () => {
+    setIsPending(true);
+
+    setTimeout(() => {
+      setIsPending(false);
+      setPoints(points - cost);
+    }, 1000);
+  };
+
   return (
     <StyledProductCard>
       <div className="card__container">
@@ -29,15 +90,11 @@ export const ProductCard: FunctionComponent<Props> = ({
           <p className="card__category">{category}</p>
         </div>
       </div>
-      <Button className="card__button">
-        Redeem for{" "}
-        <Image
-          src="/assets/icons/aeropay-3.svg"
-          alt=""
-          width="24"
-          height="24"
-        />
-        {cost}
+
+      <Button className="card__button" status={status} onClick={handleClick}>
+        {text}
+        {img && <Image src={img} alt="" width="24" height="24" />}
+        {aeropoints}
       </Button>
     </StyledProductCard>
   );
