@@ -18,7 +18,7 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
   return (
     <StyledCatalog>
       <Container>
-        <h2 className="catalog__title">
+        <h2 className="catalog__title" id="Catalog">
           <span>tech</span> products
         </h2>
         <div className="filters__container">
