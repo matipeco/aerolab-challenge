@@ -1,7 +1,7 @@
 import { Container } from "../Container";
 import { StyledCatalog } from "./style";
 import type { Product } from "@/pages";
-import { FunctionComponent } from "react";
+import { ChangeEvent, FunctionComponent, useState } from "react";
 import { ProductCard } from "../ProductCard";
 import Image from "next/image";
 import { RadioButton } from "../RadioButton";
@@ -15,6 +15,32 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
     return prod.category;
   });
   const setCategories = Array.from(new Set(categories));
+
+  const [selectedFilter, setSelectedFilter] = useState("");
+
+  const [selectedOrder, setSelectedOrder] = useState("most-recent");
+
+  const catalogProducts = products
+    .filter((prod) =>
+      selectedFilter ? prod.category === selectedFilter : prod
+    )
+    .sort((a, b) => {
+      if (selectedOrder === "most-recent") {
+        return 0;
+      }
+      return selectedOrder === "highest-price"
+        ? b.cost - a.cost
+        : a.cost - b.cost;
+    });
+
+  const handleChange = (ev: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedFilter(ev.target.value);
+  };
+
+  const selectOrder = (ev: ChangeEvent<HTMLInputElement>) => {
+    setSelectedOrder(ev.target.value);
+  };
+
   return (
     <StyledCatalog>
       <Container>
@@ -24,7 +50,12 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
         <div className="filters__container">
           <div className="select__container">
             <label htmlFor="filter">Filter by:</label>
-            <select name="" id="filter" className="filters__select">
+            <select
+              name=""
+              id="filter"
+              className="filters__select"
+              onChange={handleChange}
+            >
               <option value="">All Products</option>
               {setCategories.map((cat) => {
                 return <option key={cat}>{cat}</option>;
@@ -33,9 +64,30 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
           </div>
           <div className="radio__container">
             <p>Sorted by:</p>
-            <RadioButton id="radio-1" name="sort" label="Most recent" />
-            <RadioButton id="radio-2" name="sort" label="Lowest Price" />
-            <RadioButton id="radio-3" name="sort" label="Highest Price" />
+            <RadioButton
+              id="radio-1"
+              name="sort"
+              label="Most recent"
+              value="most-recent"
+              onChange={selectOrder}
+              checked={selectedOrder === "most-recent"}
+            />
+            <RadioButton
+              id="radio-2"
+              name="sort"
+              label="Lowest Price"
+              value="lowest-price"
+              onChange={selectOrder}
+              checked={selectedOrder === "lowest-price"}
+            />
+            <RadioButton
+              id="radio-3"
+              name="sort"
+              label="Highest Price"
+              value="highest-price"
+              onChange={selectOrder}
+              checked={selectedOrder === "highest-price"}
+            />
           </div>
 
           <div className="pagination__container">
@@ -64,7 +116,7 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
           </div>
         </div>
         <div className="catalog__products">
-          {products.map((prod) => (
+          {catalogProducts.map((prod) => (
             <ProductCard
               image={prod.img.url}
               name={prod.name}
