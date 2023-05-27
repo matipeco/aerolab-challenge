@@ -3,14 +3,21 @@ import { StyledCatalog } from "./style";
 import type { Product } from "@/pages";
 import { ChangeEvent, FunctionComponent, useState } from "react";
 import { ProductCard } from "../ProductCard";
-import Image from "next/image";
 import { RadioButton } from "../RadioButton";
+import { Pagination } from "../Pagination";
 
 type Props = {
   products: Product[];
 };
 
+export const PRODUCTS_PER_PAGE = 16;
+
 export const Catalog: FunctionComponent<Props> = ({ products }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const START_INDEX = PRODUCTS_PER_PAGE * (currentPage - 1);
+  const END_INDEX = PRODUCTS_PER_PAGE * currentPage;
+
   const categories = products.map((prod) => {
     return prod.category;
   });
@@ -40,6 +47,7 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
   const selectOrder = (ev: ChangeEvent<HTMLInputElement>) => {
     setSelectedOrder(ev.target.value);
   };
+  console.log(catalogProducts);
 
   return (
     <StyledCatalog>
@@ -89,34 +97,14 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
               checked={selectedOrder === "highest-price"}
             />
           </div>
-
-          <div className="pagination__container">
-            <button>
-              <Image
-                src="/assets/icons/chevron-default.svg"
-                alt=""
-                width="24"
-                height="24"
-                className="chevron-left"
-              />
-            </button>
-
-            <p>
-              Page <span>1 of 2</span>
-            </p>
-            <button>
-              <Image
-                className="chevron-right"
-                src="/assets/icons/chevron-default.svg"
-                alt=""
-                width="24"
-                height="24"
-              />
-            </button>
-          </div>
+          <Pagination
+            products={catalogProducts}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
         </div>
         <div className="catalog__products">
-          {catalogProducts.map((prod) => (
+          {catalogProducts.slice(START_INDEX, END_INDEX).map((prod) => (
             <ProductCard
               image={prod.img.url}
               name={prod.name}
@@ -128,31 +116,12 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
           ))}
         </div>
         <div className="catalog__footer">
-          <p>x of 32 products</p>
-          <div className="pagination__container">
-            <button>
-              <Image
-                src="/assets/icons/chevron-default.svg"
-                alt=""
-                width="24"
-                height="24"
-                className="chevron-left"
-              />
-            </button>
-
-            <p>
-              Page <span>1 of 2</span>
-            </p>
-            <button>
-              <Image
-                className="chevron-right"
-                src="/assets/icons/chevron-default.svg"
-                alt=""
-                width="24"
-                height="24"
-              />
-            </button>
-          </div>
+          <p>{`${catalogProducts.length} of ${catalogProducts.length} products`}</p>
+          <Pagination
+            products={catalogProducts}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
         </div>
       </Container>
     </StyledCatalog>
