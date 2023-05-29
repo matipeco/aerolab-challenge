@@ -5,14 +5,23 @@ import { ChangeEvent, FunctionComponent, useState } from "react";
 import { ProductCard } from "../ProductCard";
 import { RadioButton } from "../RadioButton";
 import { Pagination } from "../Pagination";
+import { NotificationContainer } from "../NotificationContainer";
 
 type Props = {
   products: Product[];
 };
 
+export type Notification = {
+  productName: string;
+  productId: string;
+  type: "error" | "success";
+};
+
 export const PRODUCTS_PER_PAGE = 16;
 
 export const Catalog: FunctionComponent<Props> = ({ products }) => {
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+
   const [currentPage, setCurrentPage] = useState(1);
 
   const START_INDEX = PRODUCTS_PER_PAGE * (currentPage - 1);
@@ -47,7 +56,6 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
   const selectOrder = (ev: ChangeEvent<HTMLInputElement>) => {
     setSelectedOrder(ev.target.value);
   };
-  console.log(catalogProducts);
 
   return (
     <StyledCatalog>
@@ -112,6 +120,7 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
               category={prod.category}
               cost={prod.cost}
               id={prod._id}
+              setNotifications={setNotifications}
             />
           ))}
         </div>
@@ -124,6 +133,8 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
           />
         </div>
       </Container>
+
+      <NotificationContainer notifications={notifications} />
     </StyledCatalog>
   );
 };

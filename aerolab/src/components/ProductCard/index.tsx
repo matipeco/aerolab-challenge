@@ -1,8 +1,15 @@
-import { FunctionComponent, useContext, useState } from "react";
+import {
+  Dispatch,
+  FunctionComponent,
+  SetStateAction,
+  useContext,
+  useState,
+} from "react";
 import { StyledProductCard } from "./style";
 import Image from "next/image";
 import { Button, ButtonStatus } from "../Button";
 import { Context } from "@/context";
+import { Notification } from "../Catalog";
 
 type Props = {
   image: string;
@@ -10,6 +17,7 @@ type Props = {
   name: string;
   cost: number;
   category: string;
+  setNotifications: Dispatch<SetStateAction<Notification[]>>;
 };
 
 type ButtonContent = {
@@ -58,6 +66,7 @@ export const ProductCard: FunctionComponent<Props> = ({
   name,
   cost,
   category,
+  setNotifications,
 }) => {
   const [isPending, setIsPending] = useState(false);
 
@@ -76,6 +85,12 @@ export const ProductCard: FunctionComponent<Props> = ({
     setTimeout(() => {
       setIsPending(false);
       setPoints(points - cost);
+      setNotifications((notifications) => {
+        return [
+          ...notifications,
+          { productName: name, type: "success", productId: id },
+        ];
+      });
     }, 1000);
   };
 
