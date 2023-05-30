@@ -1,10 +1,10 @@
 import { FunctionComponent } from "react";
 import { StyledNotificationContainer } from "./style";
-import { Notification } from "../Catalog";
-import Image from "next/image";
+import { Notification as NotificationType } from "../Catalog";
+import { Notification } from "../Notification";
 
 type Props = {
-  notifications: Notification[];
+  notifications: NotificationType[];
 };
 
 export const NotificationContainer: FunctionComponent<Props> = ({
@@ -14,23 +14,11 @@ export const NotificationContainer: FunctionComponent<Props> = ({
     <StyledNotificationContainer>
       {notifications.map((noti) => {
         return (
-          <article key={noti.productId}>
-            <Image
-              src={"./assets/icons/notification-success.svg"}
-              alt=""
-              width="32"
-              height="32"
-            />
-            <p>{`${noti.productName} redeemed successfully`}</p>
-            <button>
-              <Image
-                src={"./assets/icons/cross-default.svg"}
-                alt=""
-                width="32"
-                height="32"
-              />
-            </button>
-          </article>
+          <Notification
+            key={noti.id}
+            productName={noti.productName}
+            type={noti.type}
+          />
         );
       })}
     </StyledNotificationContainer>
