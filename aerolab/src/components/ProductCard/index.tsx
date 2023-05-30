@@ -5,6 +5,7 @@ import {
   useContext,
   useState,
 } from "react";
+import { v4 } from "uuid";
 import { StyledProductCard } from "./style";
 import Image from "next/image";
 import { Button, ButtonStatus } from "../Button";
@@ -88,7 +89,7 @@ export const ProductCard: FunctionComponent<Props> = ({
       setNotifications((notifications) => {
         return [
           ...notifications,
-          { productName: name, type: "success", productId: id },
+          { productName: name, type: "success", id: v4() },
         ];
       });
     }, 1000);

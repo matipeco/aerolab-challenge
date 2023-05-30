@@ -13,7 +13,7 @@ type Props = {
 
 export type Notification = {
   productName: string;
-  productId: string;
+  id: string;
   type: "error" | "success";
 };
 
