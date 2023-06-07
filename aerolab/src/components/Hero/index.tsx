@@ -4,10 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const Hero = () => {
+
   return (
     <StyledHero>
       <Container>
-        <div>
+        <div className="hero-container">
           <h1 className="hero__title">
             <span className="title__overline">explore the </span>
             <span className="title__tech">tech</span>

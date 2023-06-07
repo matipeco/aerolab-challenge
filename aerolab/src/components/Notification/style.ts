@@ -11,18 +11,25 @@ export const StyledNotification = styled.article`
   color: var(--neutral-600);
   background-color: var(--neutral-0);
   padding: 2.8rem;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
 
-  span {
+  p{
     margin-left: 1.5rem;
-    color: var(--neutral-900);
   }
-  button {
+  span {
+    color: var(--neutral-900);
+    font-weight: 600;
+  }
+  .btn-close {
     background-color: transparent;
     border: none;
     margin-left: auto;
+    cursor: pointer;
   }
 
   &.error {
     border-color: var(--red-200);
   }
+
+
 `;

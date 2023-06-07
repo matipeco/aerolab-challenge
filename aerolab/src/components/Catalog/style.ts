@@ -11,7 +11,7 @@ export const StyledCatalog = styled.section`
       font-weight: 600;
       margin-bottom: 6.4rem;
     }
-
+    
     &__select {
       margin: 0 4rem;
       padding: 1.6rem 2.4rem;

@@ -13,6 +13,8 @@ export const StyledPagination = styled.div`
     border-radius: 0.8rem;
     background-color: var(--brand-light-100);
     padding: 0.8rem;
+    cursor: pointer;
+
 
     &:disabled {
       background-color: var(--neutral-300);

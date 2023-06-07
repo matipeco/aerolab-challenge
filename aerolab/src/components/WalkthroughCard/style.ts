@@ -57,4 +57,38 @@ export const StyledWalkthroughCard = styled.article`
       color: var(--neutral-600);
     }
   }
+  @media (max-width: 1024px){
+    max-width: 32.3rem;
+    padding: 1rem;
+    .card {
+    &__img {
+      height:27.5rem;
+    }
+    &__text {
+    }
+
+    &__title {
+      font-size: var(--heading-5);
+      font-weight: 900;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.2rem;
+      
+      span {
+        width: 4rem;
+        height: 4rem;
+        margin-right: 1.6rem;
+        
+        img{
+          width: 2.6rem;
+          height: 2.6rem;
+        }
+      }
+    }
+    &__description{
+      font-size: var(--body-m);
+    }
+  }
+  }
 `;

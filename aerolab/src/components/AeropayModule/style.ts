@@ -26,6 +26,8 @@ export const StyledAeropay = styled.div`
     &__button {
       margin-top: 2.4rem;
       width: 100%;
+      cursor: pointer;
+
     }
     &__points {
       white-space: nowrap;

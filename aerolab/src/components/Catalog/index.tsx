@@ -134,7 +134,7 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
         </div>
       </Container>
 
-      <NotificationContainer notifications={notifications} />
+     {notifications.length > 0 && <NotificationContainer notifications={notifications} setNotifications={setNotifications}/>}
     </StyledCatalog>
   );
 };

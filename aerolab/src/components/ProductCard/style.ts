@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const StyledProductCard = styled.article`
   background-color: var(--neutral-0);
-
+  
   .card {
     &__container {
       box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06);
       border-radius: 1.6rem;
+
     }
     &__img-container {
       padding: 6.4rem 3.4rem;
@@ -38,6 +39,7 @@ export const StyledProductCard = styled.article`
       width: 100%;
       padding-top: 1.6rem;
       padding-bottom: 1.6rem;
+      cursor: pointer;
     }
   }
 `;
