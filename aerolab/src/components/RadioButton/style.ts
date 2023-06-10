@@ -25,4 +25,13 @@ export const StyledRadioButton = styled.span`
   input {
     appearance: none;
   }
+
+  @media (max-width:1024px){
+    font-size: var(--body-l);
+    margin-bottom: 7.2rem;
+    label{
+      padding: 0.8rem 2.4rem;
+
+    }
+  }
 `;

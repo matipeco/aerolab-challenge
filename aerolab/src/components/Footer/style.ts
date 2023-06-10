@@ -16,4 +16,8 @@ export const StyledFooter = styled.footer`
     color: var(--neutral-600);
     font-size: var(--body-l);
   }
+  @media(max-width: 1024px){
+    padding:4.6rem 0;
+    margin:16rem 0 0 0;
+  }
 `;

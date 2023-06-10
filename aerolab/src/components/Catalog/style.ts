@@ -32,6 +32,7 @@ export const StyledCatalog = styled.section`
   .radio__container {
     display: flex;
     align-items: center;
+
     & > span:not(:last-child) {
       margin-right: 1.2rem;
     }
@@ -75,6 +76,61 @@ export const StyledCatalog = styled.section`
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+      }
+    }
+  }
+
+  @media(max-width:1024px){
+    padding-top: 16rem;
+    position: relative;
+    .filters{
+      &__select{
+        font-size: var(--body-l);
+        margin: 0 0 26.5px 0;
+      }
+      &__container{
+        width: 100%;
+        display: inline;
+        /* background-color: red; */
+      }
+    }
+    .catalog{
+      &__title{
+        font-size: var(--heading-4);
+        margin: 0 0 42.5px 0
+      }
+
+      &__footer{
+        margin: none;
+        margin-top: 6.4rem;
+        font-size: var(--body-m);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+
+        div:nth-child(2) {
+        position: relative;
+        transform: none;
+        margin:0 0 2.4rem;
+        
+        } 
+      }
+
+      &__products{
+        gap: 4.8rem 2.4rem;
+      }
+    }
+    .select__container{
+      /* background-color: red; */
+      border: none;
+      label{
+        display: none;
+      }
+    }
+    .radio__container{
+      p{
+        display: none;
       }
     }
   }

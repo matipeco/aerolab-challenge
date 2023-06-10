@@ -30,7 +30,6 @@ export const StyledWalkthrough = styled.section`
     gap: 0.8rem;
     }
     article:first-of-type {
-      margin-left:1.7rem;
       transform: none;
       z-index: 0;
     }

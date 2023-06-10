@@ -29,6 +29,7 @@ export const Navbar = () => {
           alt="logo de aerolab"
           width="126"
           height="48"
+          className="logo"
         />
         <Dropdown />
       </StyledNavbar>

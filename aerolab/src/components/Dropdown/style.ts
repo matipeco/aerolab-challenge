@@ -17,7 +17,7 @@ export const StyledDropdown = styled.button`
   .button {
     &__points {
       margin: 0 1.6rem 0 0.8rem;
-      font-size: 1.8rem;
+      font-size: var(--body-l);
       font-weight: 600;
       background-image: var(--brand-gradient);
       background-clip: text;
@@ -30,6 +30,18 @@ export const StyledDropdown = styled.button`
       &.expanded {
         transform: rotate(-90deg);
       }
+    }
+  }
+  @media(max-width:1024px){
+    .button{
+      &__points{
+        font-size: var(--body-m);
+      }
+    
+    }
+    & > img{
+      width: 2.4rem;
+      height: 2.4rem;
     }
   }
 `;

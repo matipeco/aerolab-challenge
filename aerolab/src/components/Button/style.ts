@@ -24,4 +24,9 @@ export const StyledButton = styled.button`
     color: var(--neutral-600);
     opacity: 1;
   }
+
+  @media(max-width: 1024px){
+    background-color: blue;
+    
+  }
 `;

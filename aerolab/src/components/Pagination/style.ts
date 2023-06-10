@@ -39,4 +39,13 @@ export const StyledPagination = styled.div`
       -webkit-background-clip: text;
     }
   }
+  @media(max-width:1024px){
+    height: 5.6rem;
+    margin: none;
+    margin-right: 2rem;
+    position: absolute;
+    top:24rem;
+    right:0;
+    font-size: var(--body-m);
+  }
 `;
