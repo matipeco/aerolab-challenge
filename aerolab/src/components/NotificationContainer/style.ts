@@ -14,4 +14,9 @@ export const StyledNotificationContainer = styled.div`
     left: 2rem;
     bottom: 7rem;
   }
+
+  @media(max-width:375px){
+    width: 36rem;
+    left: 1rem;
+  }
 `;

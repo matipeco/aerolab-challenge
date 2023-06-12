@@ -24,7 +24,7 @@ export const StyledWalkthrough = styled.section`
   }
 
   @media(max-width:1024px){
-    height: 65.6rem;
+    height: 65.6rem; 
     
     & > div {
     gap: 0.8rem;
@@ -38,12 +38,20 @@ export const StyledWalkthrough = styled.section`
       transform: none;
       border: 1rem solid transparent;
       padding: 0;
-      
-
     }
     article:last-of-type {
       transform: none;
       z-index: 0;
     }
+  }
+
+  @media(max-width:375px){
+      height: auto;
+      & > div{
+        gap: 2rem;
+        margin-top: 40rem;
+        flex-direction: column;
+        align-items: center;
+      }
   }
 `;

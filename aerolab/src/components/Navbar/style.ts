@@ -16,4 +16,8 @@ export const StyledNavbar = styled.nav`
       height: 3.8rem;
     }
   }
+
+  @media(max-width:375px){
+    padding: 4rem 0;
+  }
 `;

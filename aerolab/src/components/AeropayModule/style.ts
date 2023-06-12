@@ -40,4 +40,14 @@ export const StyledAeropay = styled.div`
       }
     }
   }
+
+  @media(max-width:375px){
+    .module{
+      &__points{
+        label{
+          padding: 1rem;
+        }
+      }
+    }
+  }
 `;

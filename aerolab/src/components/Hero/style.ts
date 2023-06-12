@@ -160,4 +160,9 @@ export const StyledHero = styled.section`
       }
    }
   }
+
+  @media(max-width: 375px){
+    padding-bottom: 10rem;
+      
+  }
 `;

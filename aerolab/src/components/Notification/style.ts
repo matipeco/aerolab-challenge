@@ -31,5 +31,14 @@ export const StyledNotification = styled.article`
     border-color: var(--red-200);
   }
 
-
+  @media(max-width:375px){
+    img{
+      align-self: flex-start;
+      width: 19.5px;
+      height: 19.5px;
+    }
+    p{
+      font-size: var(--body-m);
+    }
+  }
 `;

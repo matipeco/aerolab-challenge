@@ -121,7 +121,6 @@ export const StyledCatalog = styled.section`
         position: relative;
         transform: none;
         margin:0 0 2.4rem;
-        
         } 
       }
 
@@ -141,5 +140,42 @@ export const StyledCatalog = styled.section`
         display: none;
       }
     }
+  }
+
+  @media(max-width:375px){
+    padding-top: 8rem;
+    .select__container{
+      margin: 4rem 0 2.4rem 0;
+    }
+    .filters{
+      &__select{
+        margin: 0;
+        width: 100%;
+        font-size: var(--body-m);
+      }
+      &__container{
+        div:last-of-type{
+          display: none;
+        }
+      }
+    }
+    .radio__container{
+      span{
+        font-size: var(--body-m);
+        margin-bottom: 6.4rem;
+      }
+      & > span:not(:last-child) {
+      margin-right: 0.4rem;
+      }
+      p {
+      margin-right: 1.6rem;
+      }
+    }
+    .catalog{
+      &__footer{
+        padding:0;
+      }
+    }
+
   }
 `;
