@@ -11,15 +11,15 @@ type Props = {
 export const NotificationContainer: FunctionComponent<Props> = ({
   notifications,setNotifications
 }) => {
-  useEffect(() => {
-    if (notifications.length > 0) {
-      const timeout = setTimeout(() => {
-        setNotifications((prevNotifications) => prevNotifications.slice(1));
-      }, 5000);
+  // useEffect(() => {
+  //   if (notifications.length > 0) {
+  //     const timeout = setTimeout(() => {
+  //       setNotifications((prevNotifications) => prevNotifications.slice(1));
+  //     }, 5000);
 
-      return () => clearTimeout(timeout);
-    }
-  }, [notifications, setNotifications]);
+  //     return () => clearTimeout(timeout);
+  //   }
+  // }, [notifications, setNotifications]);
 
   return (
     <StyledNotificationContainer>

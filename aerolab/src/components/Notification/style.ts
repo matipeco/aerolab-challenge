@@ -4,7 +4,7 @@ export const StyledNotification = styled.article`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  max-width: 53.2rem;
+  width: 100%;
   border: 2px solid var(--green-200);
   border-radius: 1.2rem;
   font-size: var(--body-l);
