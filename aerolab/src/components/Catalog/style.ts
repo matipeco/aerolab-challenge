@@ -70,6 +70,14 @@ export const StyledCatalog = styled.section`
       font-weight: 600;
       padding: 1.8rem 0;
       margin-top: 6.4rem;
+      p{
+        span{
+          background-image: var(--brand-gradient);
+          color: transparent;
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
+      }
 
       div:nth-child(2) {
         position: absolute;

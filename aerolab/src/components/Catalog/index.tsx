@@ -1,7 +1,7 @@
 import { Container } from "../Container";
 import { StyledCatalog } from "./style";
 import type { Product } from "@/pages";
-import { ChangeEvent, FunctionComponent, useState } from "react";
+import { ChangeEvent, FunctionComponent, useEffect, useState } from "react";
 import { ProductCard } from "../ProductCard";
 import { RadioButton } from "../RadioButton";
 import { Pagination } from "../Pagination";
@@ -17,9 +17,28 @@ export type Notification = {
   type: "error" | "success";
 };
 
-export const PRODUCTS_PER_PAGE = 16;
+export let PRODUCTS_PER_PAGE = 16;
 
 export const Catalog: FunctionComponent<Props> = ({ products }) => {
+
+  const [isTablet, setIsTablet] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setIsTablet(width <= 1024);
+    };
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  isTablet ? PRODUCTS_PER_PAGE = 8 : PRODUCTS_PER_PAGE = 16;
+
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -125,7 +144,7 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
           ))}
         </div>
         <div className="catalog__footer">
-          <p>{`${catalogProducts.length} of ${catalogProducts.length} products`}</p>
+          <p><span>{`${PRODUCTS_PER_PAGE} of ${catalogProducts.length} `}</span>products</p>
           <Pagination
             products={catalogProducts}
             currentPage={currentPage}
