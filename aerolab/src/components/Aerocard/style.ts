@@ -13,6 +13,7 @@ export const StyledAerocard = styled.div`
   overflow: hidden;
   margin-bottom: 4rem;
   font-size: 1.4rem;
+  
   &::after {
     content: "";
     display: block;

@@ -27,6 +27,15 @@ export const StyledCatalog = styled.section`
     align-items: center;
     border-right: 2px solid var(--neutral-300);
     margin-right: 4rem;
+    
+    select{
+      transition: box-shadow 200ms;
+
+      &:hover {
+      cursor: pointer;
+      box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+      }
+    }
   }
 
   .radio__container {
@@ -160,9 +169,11 @@ export const StyledCatalog = styled.section`
       }
     }
     .radio__container{
+      display: flex;
+      flex-direction: row;
+      width: 45rem;
       span{
         font-size: var(--body-m);
-        margin-bottom: 6.4rem;
       }
       & > span:not(:last-child) {
       margin-right: 0.4rem;

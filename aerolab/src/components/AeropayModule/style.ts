@@ -27,6 +27,11 @@ export const StyledAeropay = styled.div`
       margin-top: 2.4rem;
       width: 100%;
       cursor: pointer;
+      transition: 200ms ease-in;
+
+      &:hover{
+        opacity: 0.9;
+      }
 
     }
     &__points {

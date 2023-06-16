@@ -11,6 +11,13 @@ export const StyledRadioButton = styled.span`
     color: transparent;
     font-weight: 600;
     cursor: pointer;
+    transition: box-shadow 200ms;
+
+    &:hover{
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+     
     span {
       background-image: var(--brand-gradient);
       background-clip: text;
@@ -29,9 +36,12 @@ export const StyledRadioButton = styled.span`
   @media (max-width:1024px){
     font-size: var(--body-l);
     margin-bottom: 7.2rem;
+    display: inline;
     label{
-      padding: 0.8rem 2.4rem;
-
+      padding: 1rem 1.5rem;
+    }
+    span{
+      width: 100%;
     }
   }
 `;

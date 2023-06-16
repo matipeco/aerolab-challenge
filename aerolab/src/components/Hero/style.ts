@@ -28,6 +28,10 @@ export const StyledHero = styled.section`
       font-weight: 600;
     }
 
+    a{
+      scroll-behavior: smooth;
+    }
+
     &__link {
       background-image: var(--brand-gradient);
       font-size: var(--body-l);
@@ -40,7 +44,12 @@ export const StyledHero = styled.section`
       border-radius: 2.4rem;
       display: inline-flex;
       align-items: center;
-      scroll-behavior: smooth;
+      transition: 200ms ease-in;
+
+      &:hover{
+        transform: scale(1.03);
+        opacity: 0.9;
+      }
 
       img {
         margin-left: 0.5rem;

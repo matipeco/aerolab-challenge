@@ -8,8 +8,8 @@ export const StyledDropdown = styled.button`
   justify-content: center;
   align-items: center;
   padding: 0.8rem 1.6rem;
-  transition: box-shadow 200ms;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 200ms;
   &:hover {
     cursor: pointer;
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.2);
