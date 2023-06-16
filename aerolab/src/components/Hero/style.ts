@@ -47,7 +47,7 @@ export const StyledHero = styled.section`
       transition: 200ms ease-in;
 
       &:hover{
-        transform: scale(1.03);
+        transform: scale(1.01);
         opacity: 0.9;
       }
 

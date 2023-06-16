@@ -7,16 +7,23 @@ export const StyledPagination = styled.div`
   align-items: center;
   padding: 1.2rem;
   margin-left: auto;
-
+  
   button {
     border: none;
     border-radius: 0.8rem;
     background-color: var(--brand-light-100);
     padding: 0.8rem;
     cursor: pointer;
+    transition: box-shadow 200ms;
 
+    &:hover{
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    }
 
     &:disabled {
+      &:hover{
+        box-shadow: none;
+      }
       background-color: var(--neutral-300);
 
       img {

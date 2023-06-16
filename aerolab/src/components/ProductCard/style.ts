@@ -7,10 +7,16 @@ export const StyledProductCard = styled.article`
     &__container {
       box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06);
       border-radius: 1.6rem;
+      transition: box-shadow 200ms;
 
+      &:hover{
+        box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.2);
+      }
     }
     &__img-container {
-      padding: 6.4rem 3.4rem;
+      display: flex;
+      justify-content: center;
+      padding: 6.4rem 0;
       border: 1px solid var(--neutral-300);
       border-radius: 1.6rem 1.6rem 0 0;
     }
@@ -40,6 +46,12 @@ export const StyledProductCard = styled.article`
       padding-top: 1.6rem;
       padding-bottom: 1.6rem;
       cursor: pointer;
+      transition: 200ms ease-in;
+
+      &:hover{
+        transform: scale(1.01);
+        opacity: 0.9;
+      }
     }
   }
 `;
