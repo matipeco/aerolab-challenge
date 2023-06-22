@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
           property="og:description"
           content="Challenge técnico de Aerolab - Matias Pecorale"
         />
-        <meta property="og:image" content="" />
+        <meta property="og:image" content="https://i.imgur.com/b2NnHbm.png" />
 
         <meta name="twitter:card" content="summary" />
         <meta

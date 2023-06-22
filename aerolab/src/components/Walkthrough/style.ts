@@ -25,9 +25,9 @@ export const StyledWalkthrough = styled.section`
 
   @media(max-width:1024px){
     height: 65.6rem; 
-    
+
     & > div {
-    gap: 0.8rem;
+      gap: 0.8rem;
     }
     article:first-of-type {
       transform: none;

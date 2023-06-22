@@ -144,7 +144,7 @@ export const Catalog: FunctionComponent<Props> = ({ products }) => {
           ))}
         </div>
         <div className="catalog__footer">
-          <p><span>{`${PRODUCTS_PER_PAGE} of ${catalogProducts.length} `}</span>products</p>
+          <p><span>{`${PRODUCTS_PER_PAGE > catalogProducts.length ? catalogProducts.length : PRODUCTS_PER_PAGE} of ${catalogProducts.length} `}</span>products</p>
           <Pagination
             products={catalogProducts}
             currentPage={currentPage}
