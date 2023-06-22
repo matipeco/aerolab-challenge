@@ -44,7 +44,17 @@ export const StyledWalkthrough = styled.section`
       z-index: 0;
     }
   }
-
+  
+  @media(max-width:800px){
+      height: auto;
+      & > div{
+        gap: 2rem;
+        margin-top: 40rem;
+        flex-direction: column;
+        align-items: center;
+      }
+  }
+  
   @media(max-width:375px){
       height: auto;
       & > div{
