@@ -145,6 +145,8 @@ export const StyledCatalog = styled.section`
       }
     }
     .radio__container{
+      margin-bottom: 7.2rem;
+      padding-bottom: 2rem;
       p{
         display: none;
       }
@@ -171,9 +173,11 @@ export const StyledCatalog = styled.section`
     .radio__container{
       display: flex;
       flex-direction: row;
-      width: 45rem;
+      width: 100%;
+      overflow-x: auto;
       span{
         font-size: var(--body-m);
+        white-space: nowrap;
       }
       & > span:not(:last-child) {
       margin-right: 0.4rem;

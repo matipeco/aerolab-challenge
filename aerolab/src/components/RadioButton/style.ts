@@ -35,7 +35,6 @@ export const StyledRadioButton = styled.span`
 
   @media (max-width:1024px){
     font-size: var(--body-l);
-    margin-bottom: 7.2rem;
     display: inline;
     label{
       padding: 1rem 1.5rem;

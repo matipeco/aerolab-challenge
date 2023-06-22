@@ -8,18 +8,14 @@ type Props = {
 export const RadioButton: FunctionComponent<Props> = ({
   id,
   label,
-  name,
-  value,
-  onChange,
+  ...rest
 }) => {
   return (
     <StyledRadioButton>
       <input
         type="radio"
         id={id}
-        name={name}
-        value={value}
-        onChange={onChange}
+        {...rest}
       />
       <label htmlFor={id}>
         <span>{label}</span>
